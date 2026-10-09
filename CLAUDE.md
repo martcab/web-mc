@@ -4,7 +4,7 @@ Reglas confirmadas por el titular. Respétalas en cualquier cambio.
 
 ## Identidad
 
-- El nombre se escribe **Martin**, sin tilde en la «i»: «Martin Cabrera Marchán». Nunca «Martín».
+- El nombre se escribe **Martin**, sin tilde en la «i»: «Martin Cabrera Marchán». Nunca «Martín». La regla es solo para su nombre: nombres propios de terceros conservan su tilde (por ejemplo, «Universidad de San Martín de Porres»).
 - Lema de la portada: **«Criterio jurídico. Lectura política. Estrategia aplicada.»**
 - Orden de la profesión: «Abogado · Árbitro · Consultor».
 - Correo de contacto: `martin@cabrera.pe`. Dominio: `https://cabrera.pe/`.
@@ -19,7 +19,7 @@ Reglas confirmadas por el titular. Respétalas en cualquier cambio.
 
 ## Diseño y técnica
 
-- Paleta afín a IPOC: azul `#1F4E79`, gris `#595959`, negro, amarillo `#F2B705`, rojo sangre `#8E1B1B`. Tipografía Archivo (titulares) y Public Sans (texto), alojadas en `assets/fonts/`.
+- Diseño elegido: estructura «Tribuna» (propuesta A) con los colores de «Despacho» (B). Fondo blanco, tinta `#15191E`, azul IPOC `#1F4E79` para bloques y botones, amarillo `#F2B705` solo como resaltador bajo el texto y en filetes (nunca texto amarillo sobre blanco), rojo sangre `#8E1B1B` en antetítulos, gris `#595959` en texto secundario; una sola banda oscura (Enfoque). Titulares en mayúsculas, Archivo condensada y extranegrita; texto en Public Sans. Fuentes en `assets/fonts/`.
 - Retratos: los de estudio en `assets/originales/`; no generar ni alterar el rostro.
 - HTML, CSS y JavaScript nativos; sin frameworks ni dependencias. El formulario solo prepara un `mailto:`.
 - Publicación: GitHub Pages desde la rama `main` (`.github/workflows/publicar.yml`). Antes de subir, ejecutar `herramientas/qa/comprobar.mjs`.

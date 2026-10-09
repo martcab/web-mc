@@ -1,5 +1,17 @@
 # Cambios y comprobaciones
 
+## Revisión 8 — 9 de octubre de 2026: diseño «Tribuna» con colores «Despacho»
+
+Elegiste la estructura de la propuesta A con los colores de la B (lienzo de propuestas en Claude Design).
+
+- **Estructura A**: portada dividida con el lema en mayúsculas condensadas y el retrato a sangre a la derecha; franja de experiencia y medios; especialidades en cuatro columnas numeradas (cada una conserva su desplegable nativo «Alcance y entregables»); franja destacada con la última columna; más columnas y opiniones; entrevistas; trayectoria con retrato y lista numerada; banda de Enfoque; cierre «Hablemos del reto» con formulario.
+- **Colores B**: fondo blanco y encabezado claro; azul IPOC para bloques, botones y la franja de la última columna; amarillo como resaltador bajo el texto y en filetes; rojo sangre en antetítulos; Enfoque es la única banda oscura. Páginas de publicaciones con cabecera clara.
+- La franja de la última columna se genera sola desde `contenido/publicaciones/` (nuevo bloque `PUBLICACIONES:DESTACADA`).
+- Imagen para redes rehecha con la nueva paleta. Corregido un efecto del cambio de tilde: «Universidad de San Martín de Porres» recupera su tilde (regla añadida a `CLAUDE.md`).
+- Comprobaciones: 195 de 195 correctas (anchos, menú, teclado, desplegables, zoom, formulario, video, enlaces).
+
+---
+
 ## Revisión 7 — 9 de octubre de 2026: nombre y lema
 
 - El nombre se escribe **Martin**, sin tilde: corregido en todo el sitio (portada, pie, páginas de publicaciones, RSS, datos estructurados, imagen para redes, saludo del correo que prepara el formulario), en las herramientas y en la documentación. Quedan con tilde solo los nombres de archivo originales de terceros, que no se ven en la web.

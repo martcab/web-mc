@@ -277,7 +277,7 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101215">
+  <meta name="theme-color" content="#ffffff">
   <title>{e(titulo)}</title>
   <meta name="description" content="{e(descripcion)}">{robots}
   <link rel="canonical" href="{e(url)}">
@@ -304,7 +304,7 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
       <a class="brand" href="{prefijo}index.html" aria-label="Martin Cabrera, inicio"><span class="monogram" aria-hidden="true">MC<span>.</span></span><span class="brand-name">Martin Cabrera<span>ESTRATEGIA Y ASUNTOS PÚBLICOS</span></span></a>
       <button class="menu-toggle" type="button" aria-controls="navegacion" aria-expanded="false"><span>Menú</span><span class="menu-lines" aria-hidden="true"></span></button>
       <nav id="navegacion" aria-label="Navegación principal">
-        <a href="{prefijo}index.html#especialidades">Especialidades</a><a href="{prefijo}index.html#trayectoria">Trayectoria</a><a href="{prefijo}index.html#enfoque">Enfoque</a><a href="{prefijo}publicaciones/index.html" aria-current="page">Publicaciones</a><a href="{prefijo}index.html#medios">En medios</a><a class="nav-contact" href="{prefijo}index.html#contacto">Conversemos</a>
+        <a href="{prefijo}index.html#especialidades">Especialidades</a><a href="{prefijo}publicaciones/index.html" aria-current="page">Publicaciones</a><a href="{prefijo}index.html#medios">En medios</a><a href="{prefijo}index.html#trayectoria">Trayectoria</a><a href="{prefijo}index.html#enfoque">Enfoque</a><a class="nav-contact" href="{prefijo}index.html#contacto">Conversemos</a>
       </nav>
     </div>
   </header>
@@ -531,15 +531,31 @@ def reemplazar_bloque(texto: str, nombre: str, contenido: str, sangria: str) -> 
     return texto[:i] + '\n' + contenido + '\n' + sangria + texto[f:]
 
 
+def destacada(p: Publicacion | None) -> str:
+    """Franja de la portada con la columna más reciente."""
+    s = '          '
+    if not p:
+        return f'{s}<p class="eyebrow">02 / Publicaciones</p><h2 id="columna-titulo">Lectura de la coyuntura</h2><p class="feature-dek">Pronto habrá columnas en esta sección.</p>'
+    meta = ' · '.join(x for x in ('Última columna', p.fuente, p.fecha.corta() if p.fecha.anio else '') if x)
+    resumen = f'\n{s}<p class="feature-dek">{e(p.resumen)}</p>' if p.resumen else ''
+    return (f'{s}<p class="eyebrow">02 / Publicaciones · {e(meta)}</p>\n'
+            f'{s}<h2 id="columna-titulo"><a href="publicaciones/{p.slug}.html">{e(p.titulo)}</a></h2>{resumen}\n'
+            f'{s}<p class="feature-actions"><a class="button dark" href="publicaciones/{p.slug}.html">Leer la columna</a>'
+            f'<a class="button outline" href="publicaciones/index.html">Todas las publicaciones</a></p>')
+
+
 def actualizar_portada(items: list[Publicacion]) -> None:
     texto = PORTADA.read_text(encoding='utf-8')
     s = '            '
-    columnas = [p for p in items if p.tipo == 'columna'][:4]
+    todas_columnas = [p for p in items if p.tipo == 'columna']
+    lider = todas_columnas[0] if todas_columnas else None
+    columnas = todas_columnas[1:4]
     opiniones = [p for p in items if p.tipo in ('declaracion', 'opinion')][:5]
     entrevistas = [p for p in items if p.tipo == 'entrevista'][:4]
     vacio = f'{s}<p class="empty-state">Pronto habrá publicaciones en esta sección.</p>'
+    texto = reemplazar_bloque(texto, 'PUBLICACIONES:DESTACADA', destacada(lider), '          ')
     texto = reemplazar_bloque(texto, 'PUBLICACIONES:COLUMNAS',
-                              '\n'.join(s + tarjeta(p, f'publicaciones/{p.slug}.html', 'h4', i == 0) for i, p in enumerate(columnas)) or vacio, s)
+                              '\n'.join(s + tarjeta(p, f'publicaciones/{p.slug}.html', 'h4') for p in columnas) or vacio, s)
     texto = reemplazar_bloque(texto, 'PUBLICACIONES:OPINIONES',
                               (f'{s}<ul class="press-list">\n' + '\n'.join(s + '  ' + fila(p, f'publicaciones/{p.slug}.html') for p in opiniones) + f'\n{s}</ul>') if opiniones else vacio, s)
     texto = reemplazar_bloque(texto, 'PUBLICACIONES:ENTREVISTAS',
