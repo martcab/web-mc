@@ -18,6 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Martín Cabrera Marchán junto al lema Criterio jurídico. Lectura política. Estrategia pública.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@martcab">
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMTAxMjE1Ii8+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjUiIGZpbGw9IiMxZjRlNzkiLz48cmVjdCB4PSIzOCIgd2lkdGg9IjEzIiBoZWlnaHQ9IjUiIGZpbGw9IiNmMmI3MDUiLz48cmVjdCB4PSI1MSIgd2lkdGg9IjEzIiBoZWlnaHQ9IjUiIGZpbGw9IiM4ZTFiMWIiLz48dGV4dCB4PSI2IiB5PSI0NiIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkFyY2hpdm8sJ0FyaWFsIE5hcnJvdycsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIzMSIgbGV0dGVyLXNwYWNpbmc9Ii0yIj5NQzwvdGV4dD48cmVjdCB4PSI1MyIgeT0iNDAiIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIGZpbGw9IiNmMmI3MDUiLz48L3N2Zz4K" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="Publicaciones de Martín Cabrera" href="feed.xml">
   <style>
@@ -251,7 +252,16 @@ h3 { font-weight: 700; }
 .press-list.on-dark li { border-color: var(--line-dark); }
 .press-list.on-dark .press-meta { color: var(--grey-on-dark); }
 .press-list.on-dark a:hover .press-title { color: var(--yellow); }
-.social-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; padding: 0; }
+.social-grid { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 20px 0 0; padding: 0; }
+.social-grid a { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; min-height: 64px; padding: 12px 14px; background: var(--black-soft); border: 1px solid #ffffff1f; border-bottom: 3px solid var(--blue); transition: border-color .2s, background .2s; }
+.social-grid a:hover { border-color: var(--yellow); background: #22272d; }
+.social-mark { grid-row: 1 / 3; display: grid; place-items: center; width: 38px; height: 38px; background: var(--yellow); color: var(--black); font: 800 .95rem/1 var(--display); letter-spacing: -.02em; }
+.social-name { font: 700 .95rem/1.2 var(--display); color: var(--white); }
+.social-handle { font-size: .8rem; color: var(--grey-on-dark); overflow-wrap: anywhere; }
+.footer-social { display: flex; gap: 8px; }
+.footer-social a { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #ffffff33; font: 800 .82rem/1 var(--display); color: var(--white); transition: background .2s, color .2s, border-color .2s; }
+.footer-social a:hover { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+.social-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; padding: 0; }
 .social-list a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border: 1px solid #ffffff40; font-size: .88rem; font-weight: 600; color: #e9ecef; transition: border-color .2s, color .2s; }
 .social-list a:hover { border-color: var(--yellow); color: var(--yellow); }
 
@@ -380,6 +390,7 @@ h3 { font-weight: 700; }
   .approach-foot { align-items: start; }
   .column-grid { grid-template-columns: 1fr; gap: 56px; }
   .video-grid { gap: 28px; }
+  .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-grid { gap: 40px; }
   .consultation-form { padding: 28px 25px; }
   .band-row { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -443,6 +454,9 @@ h3 { font-weight: 700; }
   .play { top: 16px; right: 18px; width: 50px; height: 50px; }
   .play::after { left: 20px; top: 15px; border-left-width: 14px; border-top-width: 10px; border-bottom-width: 10px; }
   .statements, .social { margin-top: 50px; }
+  .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .social-grid a { padding: 10px; column-gap: 10px; }
+  .social-mark { width: 34px; height: 34px; }
   .contact-grid { grid-template-columns: 1fr; gap: 28px; }
   .contact h2 { font-size: 3.1rem; }
   .email-link { font-size: 1.45rem; margin-top: 26px; }
@@ -483,7 +497,7 @@ h3 { font-weight: 700; }
 
 /* Impresión ------------------------------------------------------------- */
 @media print {
-  .site-header, .menu-toggle, .hero-actions, .consultation-form, .copy-button, .video-grid, .social, .skip-link, .footer-nav, .archive-filters { display: none; }
+  .site-header, .menu-toggle, .hero-actions, .consultation-form, .copy-button, .video-grid, .social, .skip-link, .footer-nav, .footer-social, .archive-filters { display: none; }
   .container { width: 100%; }
   .section { padding: 2rem 0; }
   .hero, .approach, .media, .site-footer, .article-hero { background: white; color: var(--ink); }
@@ -512,7 +526,7 @@ h3 { font-weight: 700; }
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de San Martín de Porres" },
     "worksFor": { "@type": "Organization", "name": "IPOC Consultores" },
     "knowsAbout": ["Derecho parlamentario", "Gestión pública", "Control gubernamental", "Relaciones interinstitucionales", "Arbitraje"],
-    "sameAs": ["https://elcomercio.pe/autor/martin-cabrera/", "https://www.lampadia.com/author/mcabrera/"]
+    "sameAs": ["https://www.linkedin.com/in/martcab/", "https://x.com/martcab", "https://www.instagram.com/martcab/", "https://www.facebook.com/martcab", "https://www.tiktok.com/@martcab9", "https://elcomercio.pe/autor/martin-cabrera/", "https://www.lampadia.com/author/mcabrera/"]
   }
   </script>
 </head>
@@ -549,7 +563,7 @@ h3 { font-weight: 700; }
       </div>
       <div class="container institutional-band">
         <div class="band-row"><span class="band-label">EXPERIENCIA INSTITUCIONAL</span><div><span>Congreso de la República</span><span>Contraloría General</span><span>Defensoría del Pueblo</span></div></div>
-        <div class="band-row"><span class="band-label">OPINIÓN PUBLICADA EN</span><div><a href="https://elcomercio.pe/autor/martin-cabrera/" rel="noopener" target="_blank">El Comercio<span class="visually-hidden"> (se abre en otra pestaña)</span></a><a href="https://www.lampadia.com/author/mcabrera/" rel="noopener" target="_blank">Lampadia<span class="visually-hidden"> (se abre en otra pestaña)</span></a><a href="publicaciones/entrevistas.html">Perú21 TV</a></div></div>
+        <div class="band-row"><span class="band-label">EN MEDIOS</span><div><a href="https://elcomercio.pe/autor/martin-cabrera/" rel="noopener" target="_blank">El Comercio<span class="visually-hidden"> (se abre en otra pestaña)</span></a><a href="https://www.lampadia.com/author/mcabrera/" rel="noopener" target="_blank">Lampadia<span class="visually-hidden"> (se abre en otra pestaña)</span></a><a href="publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html">RPP</a><a href="publicaciones/aumento-de-la-asignacion-congresal.html">Perú21 TV</a></div></div>
       </div>
     </section>
 
@@ -629,22 +643,25 @@ h3 { font-weight: 700; }
         <div class="section-heading"><div><p class="eyebrow light">05 / En medios</p><h2 id="medios-titulo">Voz en<br><em>los medios.</em></h2></div><p class="heading-aside">Entrevistas en televisión y medios digitales sobre Congreso, representación y gestión pública.</p></div>
         <div class="video-grid">
             <!-- PUBLICACIONES:ENTREVISTAS:INICIO (bloque generado por herramientas/publicar.py; no editar a mano) -->
-            <article class="video-card"><div class="video-frame" data-youtube="Gtj2sfF3A3Y" data-title="Congreso y consensos en tiempos de crisis"><a class="video-poster" href="https://www.youtube.com/watch?v=Gtj2sfF3A3Y" rel="noopener" target="_blank"><span class="play" aria-hidden="true"></span><span class="video-source">YouTube</span><span class="visually-hidden">Reproducir el video: </span><span class="video-quote">«Congreso es una organización que aún no consigue espacios de consensos»</span></a></div><h3><a href="publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html">Congreso y consensos en tiempos de crisis</a></h3><p>Entrevista sobre la capacidad del Congreso para construir acuerdos en momentos de crisis.</p></article>
+            <article class="video-card"><div class="video-frame" data-youtube="Gtj2sfF3A3Y" data-title="Congreso y consensos en tiempos de crisis"><a class="video-poster" href="https://www.youtube.com/watch?v=Gtj2sfF3A3Y" rel="noopener" target="_blank"><span class="play" aria-hidden="true"></span><span class="video-source">RPP</span><span class="visually-hidden">Reproducir el video: </span><span class="video-quote">«Congreso es una organización que aún no consigue espacios de consensos»</span></a></div><h3><a href="publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html">Congreso y consensos en tiempos de crisis</a></h3><p>Entrevista sobre la capacidad del Congreso para construir acuerdos en momentos de crisis.</p></article>
             <article class="video-card"><div class="video-frame"><a class="video-poster" href="publicaciones/aumento-de-la-asignacion-congresal.html"><span class="play" aria-hidden="true"></span><span class="video-source">Perú21 TV · La voz del 21</span><span class="visually-hidden">Ver: </span><span class="video-quote">«Debería evaluarse bajo criterios técnicos»</span></a></div><h3><a href="publicaciones/aumento-de-la-asignacion-congresal.html">Aumento de la asignación congresal</a></h3><p>Conversación sobre el aumento de la asignación a los congresistas.</p></article>
             <!-- PUBLICACIONES:ENTREVISTAS:FIN -->
         </div>
         <p class="column-links"><a class="text-link light-link" href="publicaciones/entrevistas.html">Todas las entrevistas</a></p>
         <div class="social">
-          <h3 class="list-title light">Sígueme</h3>
+          <h3 class="list-title light">Sígueme en redes</h3>
+          <ul class="social-grid">
+            <li><a href="https://www.linkedin.com/in/martcab/" rel="me noopener" target="_blank"><span class="social-mark" aria-hidden="true">in</span><span class="social-name">LinkedIn</span><span class="social-handle">martcab</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+            <li><a href="https://x.com/martcab" rel="me noopener" target="_blank"><span class="social-mark" aria-hidden="true">X</span><span class="social-name">X (Twitter)</span><span class="social-handle">@martcab</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+            <li><a href="https://www.instagram.com/martcab/" rel="me noopener" target="_blank"><span class="social-mark" aria-hidden="true">IG</span><span class="social-name">Instagram</span><span class="social-handle">@martcab</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+            <li><a href="https://www.facebook.com/martcab" rel="me noopener" target="_blank"><span class="social-mark" aria-hidden="true">f</span><span class="social-name">Facebook</span><span class="social-handle">martcab</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+            <li><a href="https://www.tiktok.com/@martcab9" rel="me noopener" target="_blank"><span class="social-mark" aria-hidden="true">TT</span><span class="social-name">TikTok</span><span class="social-handle">@martcab9</span><span class="visually-hidden"> (se abre en otra pestaña)</span></a></li>
+          </ul>
           <ul class="social-list">
             <li><a href="https://elcomercio.pe/autor/martin-cabrera/" rel="noopener" target="_blank">El Comercio · Página de autor</a></li>
             <li><a href="https://www.lampadia.com/author/mcabrera/" rel="noopener" target="_blank">Lampadia · Página de autor</a></li>
             <li><a href="publicaciones/index.html">Repositorio de publicaciones</a></li>
             <li><a href="feed.xml">RSS</a></li>
-            <!-- REDES: reemplaza la URL y quita «hidden» para mostrar cada perfil. -->
-            <li hidden><a href="https://www.linkedin.com/in/REEMPLAZAR" rel="me noopener" target="_blank">LinkedIn</a></li>
-            <li hidden><a href="https://x.com/REEMPLAZAR" rel="me noopener" target="_blank">X</a></li>
-            <li hidden><a href="https://www.youtube.com/@REEMPLAZAR" rel="me noopener" target="_blank">YouTube</a></li>
           </ul>
         </div>
       </div>
@@ -673,6 +690,7 @@ h3 { font-weight: 700; }
       <a class="footer-brand" href="#inicio">Martín Cabrera<span>Marchán</span></a>
       <p>Gestión pública · Asuntos parlamentarios · Relaciones interinstitucionales · Arbitraje</p>
       <nav class="footer-nav" aria-label="Enlaces del pie de página"><a href="publicaciones/index.html">Publicaciones</a><a href="feed.xml">RSS</a><a href="mailto:martin@cabrera.pe">Correo</a></nav>
+      <nav class="footer-social" aria-label="Redes sociales"><a href="https://www.linkedin.com/in/martcab/" rel="me noopener" target="_blank" aria-label="LinkedIn (se abre en otra pestaña)"><span aria-hidden="true">in</span></a><a href="https://x.com/martcab" rel="me noopener" target="_blank" aria-label="X (Twitter) (se abre en otra pestaña)"><span aria-hidden="true">X</span></a><a href="https://www.instagram.com/martcab/" rel="me noopener" target="_blank" aria-label="Instagram (se abre en otra pestaña)"><span aria-hidden="true">IG</span></a><a href="https://www.facebook.com/martcab" rel="me noopener" target="_blank" aria-label="Facebook (se abre en otra pestaña)"><span aria-hidden="true">f</span></a><a href="https://www.tiktok.com/@martcab9" rel="me noopener" target="_blank" aria-label="TikTok (se abre en otra pestaña)"><span aria-hidden="true">TT</span></a></nav>
       <span class="footer-copy">© 2026 Martín Cabrera</span>
     </div>
   </footer>

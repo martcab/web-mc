@@ -1,5 +1,14 @@
 # Cambios y comprobaciones
 
+## Revisión 3 — 9 de octubre de 2026: confirmaciones y redes
+
+- Confirmaste que eres el entrevistado del video de YouTube y que es de **RPP**: el medio quedó como RPP (el video sigue reproduciéndose en tu página) y RPP se añadió a la franja «En medios» de la portada. La fecha figura como 2023, aproximada.
+- Confirmaste mostrar la **gerencia general de ASEPRI**: se mantiene en Trayectoria.
+- **Redes sociales** añadidas: LinkedIn (`linkedin.com/in/martcab`), X (`@martcab`), Instagram (`@martcab`), Facebook (`martcab`) y TikTok (`@martcab9`), en «Sígueme en redes», en el pie de todas las páginas y en `sameAs`. La dirección de LinkedIn se armó con el formato estándar `/in/martcab`; conviene verificarla.
+- Las páginas de entrevistas con video ya no muestran el botón «Ver en…» del medio (el video se reproduce ahí mismo); indican dónde más está disponible.
+
+---
+
 ## Revisión 2 — 9 de octubre de 2026: paleta IPOC, tipografía y repositorio de publicaciones
 
 **Cambios**
@@ -84,16 +93,16 @@ No se inventaron cargos, clientes, cifras ni reconocimientos. Lo nuevo proviene 
 | Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. Sin fecha confirmada: «Cara y Sello», «Mochasueldos» y la entrevista de Perú21; la entrevista de YouTube figura como 2023 (aproximada). |
 | Entrevista Perú21 TV («La voz del 21») sobre la asignación congresal | peru21.pe | Verificado por título. Fecha no disponible. |
 | Declaraciones en El Comercio (nueva Cámara de Diputados; casos «mochasueldos») | elcomercio.pe | Verificado por título y cita. |
-| Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Por confirmar**: el título coincide con tu nombre y tema, pero no se pudo ver el canal. Si no eres tú, borra `contenido/publicaciones/2023-congreso-espacios-de-consensos.md` y vuelve a publicar. |
-| Gerencia general de ASEPRI | Tu guía de voz de marca. | **Por confirmar** que quieras mostrarlo y que siga vigente. |
+| Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Confirmado** por ti (revisión 3): entrevista de RPP. |
+| Gerencia general de ASEPRI | Tu guía de voz de marca. | **Confirmado** por ti (revisión 3). |
 | Entregables de las especialidades (ayudas memoria, cuadros comparativos, mapas de actores, planes de incidencia) | Tus plantillas de trabajo habituales. | Redactados como servicios, sin clientes ni resultados. |
 
 Se encontró en un directorio de terceros (RocketReach) una mención a «Preciso Comunicación Integral»; **no se incluyó** porque no es una fuente confiable.
 
 ### 5. Pendientes para ti
 
-1. Confirmar o retirar el video de YouTube y la mención a ASEPRI.
-2. Indicar tus perfiles de LinkedIn, X o YouTube para activar la lista «Sígueme».
+1. ~~Confirmar el video de YouTube y la mención a ASEPRI~~ (confirmados en la revisión 3).
+2. ~~Indicar tus perfiles de redes~~ (añadidos en la revisión 3).
 3. Indicar URLs de otras entrevistas en televisión o radio (con el identificador de YouTube basta para incrustarlas).
 4. Definir el dominio real y actualizar la URL canónica (ver README).
 5. Escribir la primera columna propia en `contenido/publicaciones/`.

@@ -40,6 +40,14 @@ VISTA_PREVIA = SALIDA / '_vista-previa'
 PORTADA = RAIZ / 'index.html'
 AUTOR = 'Martín Cabrera Marchán'
 CORREO = 'martin@cabrera.pe'
+# Redes sociales: (nombre, marca corta, dirección)
+REDES = [
+    ('LinkedIn', 'in', 'https://www.linkedin.com/in/martcab/'),
+    ('X (Twitter)', 'X', 'https://x.com/martcab'),
+    ('Instagram', 'IG', 'https://www.instagram.com/martcab/'),
+    ('Facebook', 'f', 'https://www.facebook.com/martcab'),
+    ('TikTok', 'TT', 'https://www.tiktok.com/@martcab9'),
+]
 
 # tipo: (singular, plural, archivo del filtro)
 TIPOS = {
@@ -281,6 +289,7 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
   <meta property="og:url" content="{e(url)}">
   <meta property="og:image" content="{e(url_sitio())}assets/og-martin-cabrera.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@martcab">
   <link rel="icon" href="{prefijo}favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="Publicaciones de Martín Cabrera" href="{prefijo}feed.xml">
   <link rel="preload" href="{prefijo}assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -308,6 +317,7 @@ def pie(prefijo: str) -> str:
       <a class="footer-brand" href="{prefijo}index.html">Martín Cabrera<span>Marchán</span></a>
       <p>Gestión pública · Asuntos parlamentarios · Relaciones interinstitucionales · Arbitraje</p>
       <nav class="footer-nav" aria-label="Enlaces del pie de página"><a href="{prefijo}publicaciones/index.html">Publicaciones</a><a href="{prefijo}feed.xml">RSS</a><a href="mailto:{CORREO}">Correo</a></nav>
+      <nav class="footer-social" aria-label="Redes sociales">{''.join(f'<a href="{u}" rel="me noopener" target="_blank" aria-label="{n} (se abre en otra pestaña)"><span aria-hidden="true">{m}</span></a>' for n, m, u in REDES)}</nav>
       <span class="footer-copy">© {dt.date.today().year} Martín Cabrera</span>
     </div>
   </footer>
@@ -387,14 +397,16 @@ def pagina_publicacion(p: Publicacion, base: str, borrador: bool) -> str:
         cuerpo.append(f'<blockquote><p>«{e(p.cita.rstrip("."))}»</p></blockquote>')
     if p.cuerpo_md:
         cuerpo.append(f'<div class="prose">\n{markdown_a_html(p.cuerpo_md)}\n</div>')
-    if p.url_original and not p.cuerpo_md:
+    if p.url_original and not p.cuerpo_md and not p.video_youtube:
         verbo = 'Ver' if p.tipo == 'entrevista' else 'Leer'
         sitio = p.medio or 'el medio original'
         nota = f' {e(p.nota_medio)}' if p.nota_medio else ''
         cuerpo.append(f'<div class="external-box"><p>{p.singular} publicada en <strong>{e(p.fuente)}</strong>. El contenido completo está en el sitio del medio.{nota}</p>'
                       f'<a class="button dark" href="{e(p.url_original)}" rel="noopener" target="_blank">{verbo} en {e(sitio)}<span class="visually-hidden"> (se abre en otra pestaña)</span></a></div>')
     original = ''
-    if p.url_original and p.cuerpo_md:
+    if p.video_youtube:
+        original = f'<p class="original-source">{p.singular} de {e(p.fuente)}. El video también está disponible en <a href="https://www.youtube.com/watch?v={e(p.video_youtube)}" rel="noopener" target="_blank">YouTube</a>.</p>'
+    elif p.url_original and p.cuerpo_md:
         nota = f' {e(p.nota_medio)}' if p.nota_medio else ''
         original = f'<p class="original-source">Publicada originalmente en <a href="{e(p.url_original)}" rel="noopener" target="_blank">{e(p.fuente)}</a>.{nota}</p>'
 

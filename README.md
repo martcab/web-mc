@@ -44,7 +44,9 @@ El script crea la página de cada publicación, el archivo por año con filtros 
 
 ## Redes sociales
 
-En la lista «Sígueme» de la sección En medios hay entradas ocultas para LinkedIn, X y YouTube. Reemplaza `REEMPLAZAR` por tu usuario real y borra el atributo `hidden`. Están ocultas porque no se pudo verificar la dirección de tus perfiles. Entrevistas, columnas y declaraciones ya no se editan en `index.html`: se agregan como archivos en `contenido/publicaciones/`.
+Tus perfiles (LinkedIn, X, Instagram, Facebook y TikTok) aparecen en «Sígueme en redes» (sección En medios), en el pie de todas las páginas y en los datos estructurados para buscadores (`sameAs`). Para cambiar uno, edita la lista `REDES` al inicio de `herramientas/publicar.py` (pie de las publicaciones) y los mismos enlaces en `index.html`.
+
+Se usan enlaces, no muros incrustados: incrustar los perfiles de X, Instagram, Facebook o TikTok exige cargar sus scripts, que rastrean a los visitantes y hacen más lenta la página. Si más adelante quieres un muro concreto, se puede añadir con carga al pulsar, como los videos.
 
 ## Contacto y datos
 
