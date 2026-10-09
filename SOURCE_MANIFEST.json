@@ -1,0 +1,13 @@
+{
+  "source_url": "https://martin-cabrera-estrategia.martcab.chatgpt.site",
+  "source_commit": "71e95f1b745877f0e938d083497c077a0963a8a1",
+  "exported_at_utc": "2026-10-06T17:04:59.314974+00:00",
+  "files": {
+    "index.html": "fb34ab6feb16b249256d27766ace807fef3ec778a27ce9f93026e4678b320e58",
+    "styles.css": "c761c796e99e8f8eb886d1162e194d011b606f73a37f261e73e38e78beb13391",
+    "site.js": "bb7252a3c0ef37a17cc50bb8fecb927a219aac0cbfe39b8443f99d51a73893ca",
+    "favicon.svg": "638a2d558d219e53327d70b2b33e63b1744165670319fdb01eb5c508eb9c07f0",
+    "assets/martin-cabrera.jpg": "cb8addb3d06ae53c97ac34e4813ec20e58b2f94df49ebeb3ec2d14a44f5b2872"
+  },
+  "notes": "Original HTML, CSS, JavaScript and assets copied unchanged. Standalone HTML embeds the same assets."
+}
