@@ -1,5 +1,15 @@
 # Cambios y comprobaciones
 
+## Revisión 7 — 9 de octubre de 2026: nombre y lema
+
+- El nombre se escribe **Martin**, sin tilde: corregido en todo el sitio (portada, pie, páginas de publicaciones, RSS, datos estructurados, imagen para redes, saludo del correo que prepara el formulario), en las herramientas y en la documentación. Quedan con tilde solo los nombres de archivo originales de terceros, que no se ven en la web.
+- Lema: **«Criterio jurídico. Lectura política. Estrategia aplicada.»** en la portada, en `og:title` y en la imagen para redes.
+- Para que no se repita: `CLAUDE.md` en la raíz del repositorio reúne las reglas confirmadas (nombre, lema, datos de contacto, redes, paleta). Lo leen las próximas sesiones de trabajo.
+- Ajuste: en móviles el titular se redujo un poco para que «Estrategia aplicada.» quepa en una línea (comprobado de 320 a 1440 px).
+- Comprobaciones: 195 de 195 correctas.
+
+---
+
 ## Revisión 6 — 9 de octubre de 2026: fechas y GitHub Pages
 
 - Fechas indicadas por ti: entrevista de RPP, **26 de junio de 2023**; «Mochasueldos» (El Comercio), **23 de octubre de 2024**. Ya no queda ninguna publicación sin fecha; el Cara y Sello figura solo con el año 2023. Los archivos se renombraron con su fecha para ordenarlos; las direcciones públicas no cambian.
@@ -124,7 +134,7 @@ No se inventaron cargos, clientes, cifras ni reconocimientos. Lo nuevo proviene 
 | Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. Fechas completadas en la revisión 4; solo «Mochasueldos» sigue sin fecha. |
 | Entrevista Perú21 TV («La voz del 21») sobre la asignación congresal | peru21.pe | Verificado por título. Fecha no disponible. |
 | Declaraciones en El Comercio (nueva Cámara de Diputados; casos «mochasueldos») | elcomercio.pe | Verificado por título y cita. |
-| Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Confirmado** por ti (revisión 3): entrevista de RPP. |
+| Video de YouTube `Gtj2sfF3A3Y`, «Martin Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Confirmado** por ti (revisión 3): entrevista de RPP. |
 | Gerencia general de ASEPRI | Tu guía de voz de marca. | **Confirmado** por ti (revisión 3). |
 | Entregables de las especialidades (ayudas memoria, cuadros comparativos, mapas de actores, planes de incidencia) | Tus plantillas de trabajo habituales. | Redactados como servicios, sin clientes ni resultados. |
 

@@ -1,5 +1,5 @@
 'use strict';
-/* Martín Cabrera Marchán — comportamiento del sitio.
+/* Martin Cabrera Marchán — comportamiento del sitio.
    Sin dependencias. Cada bloque comprueba que sus elementos existan,
    porque este archivo también se usa en las páginas de columnas. */
 
@@ -105,7 +105,7 @@ if (form) {
     }
     setError(false);
     const org = organization.value.trim();
-    const body = 'Hola, Martín:\n\n'
+    const body = 'Hola, Martin:\n\n'
       + (org ? 'Nombre u organización: ' + org + '\n\n' : '')
       + 'Tema: ' + topic.value + '\n\n'
       + text

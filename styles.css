@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Martín Cabrera Marchán — hoja de estilos
+   Martin Cabrera Marchán — hoja de estilos
    Paleta afín a IPOC Consultores: azul #1F4E79 y gris #595959 de sus
    documentos, con negro, amarillo y rojo sangre como acentos.
    Tipografía: Archivo (titulares) y Public Sans (texto), alojadas en assets/fonts.
@@ -398,7 +398,7 @@ h3 { font-weight: 700; }
 }
 @media (max-width: 720px) {
   .hero-grid { grid-template-columns: 1fr; padding-top: 40px; gap: 40px; padding-bottom: 34px; }
-  h1 { font-size: clamp(2.5rem, 11vw, 3.6rem); }
+  h1 { font-size: clamp(2rem, 9.2vw, 3.6rem); }
   .hero-lead { max-width: 560px; margin-top: 22px; }
   .hero-actions { margin-top: 28px; gap: 16px 24px; }
   .hero-signature { flex-direction: row; margin-top: 30px; padding-top: 17px; }

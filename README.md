@@ -1,4 +1,4 @@
-# Martín Cabrera Marchán — sitio personal
+# Martin Cabrera Marchán — sitio personal
 
 Sitio estático con portada de una página y repositorio oficial de columnas, entrevistas, declaraciones y opiniones. HTML, CSS y JavaScript nativos, sin dependencias, sin base de datos y sin servidor de aplicación. Se aloja en cualquier servicio de archivos estáticos.
 

@@ -1,4 +1,4 @@
-# Prompt para continuar el sitio de Martín Cabrera en Claude Code
+# Prompt para continuar el sitio de Martin Cabrera en Claude Code
 
 Actúa como desarrollador web senior y diseñador editorial. Quiero que retomes un sitio personal que ya fue diseñado y desarrollado. Trabaja sobre el código adjunto: conserva la identidad y reproduce primero la versión existente antes de proponer cambios.
 
@@ -10,7 +10,7 @@ Referencia alojada: https://martin-cabrera-estrategia.martcab.chatgpt.site. Tien
 
 ## Contexto y objetivo
 
-Soy Martín Cabrera Marchán, abogado, consultor y árbitro peruano, natural de Tumbes y radicado en Lima. Soy socio fundador de IPOC Consultores. Mi experiencia incluye asesoría parlamentaria en el Congreso, asesoría y relaciones interinstitucionales en la Contraloría General, y asesoría en la Defensoría del Pueblo.
+Soy Martin Cabrera Marchán, abogado, consultor y árbitro peruano, natural de Tumbes y radicado en Lima. Soy socio fundador de IPOC Consultores. Mi experiencia incluye asesoría parlamentaria en el Congreso, asesoría y relaciones interinstitucionales en la Contraloría General, y asesoría en la Defensoría del Pueblo.
 
 El sitio debe posicionarme ante empresas, gremios e instituciones como un profesional que integra criterio jurídico, lectura política y estrategia pública, y facilitar consultas profesionales. Mantén el tono formal, claro, analítico y natural; evita grandilocuencia y lenguaje genérico de marketing.
 
@@ -22,7 +22,7 @@ Mantén el diseño editorial sobrio: azul profundo `#102735`, azul oscuro `#0b1e
 
 Conserva la página única y sus secciones:
 
-1. Inicio: «Criterio jurídico. Lectura política. Estrategia pública.», fotografía, presentación y llamada a conversar.
+1. Inicio: «Criterio jurídico. Lectura política. Estrategia aplicada.», fotografía, presentación y llamada a conversar.
 2. Especialidades desplegables: asuntos parlamentarios; gestión pública y control; relaciones interinstitucionales; arbitraje y controversias.
 3. Trayectoria: biografía, formación y experiencia institucional, sin implicar respaldo de las entidades mencionadas.
 4. Enfoque de IPOC: instituciones, política y comunicaciones.

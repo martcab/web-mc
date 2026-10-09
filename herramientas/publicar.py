@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publica el repositorio de publicaciones de Martín Cabrera como páginas estáticas.
+"""Publica el repositorio de publicaciones de Martin Cabrera como páginas estáticas.
 
 Cada columna, entrevista, declaración u opinión es un archivo de texto en
 contenido/publicaciones/*.md. El script genera:
@@ -38,7 +38,7 @@ FUENTES = RAIZ / 'contenido' / 'publicaciones'
 SALIDA = RAIZ / 'publicaciones'
 VISTA_PREVIA = SALIDA / '_vista-previa'
 PORTADA = RAIZ / 'index.html'
-AUTOR = 'Martín Cabrera Marchán'
+AUTOR = 'Martin Cabrera Marchán'
 CORREO = 'martin@cabrera.pe'
 # Redes sociales: (nombre, marca corta, dirección)
 REDES = [
@@ -291,7 +291,7 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@martcab">
   <link rel="icon" href="{prefijo}favicon.svg" type="image/svg+xml">
-  <link rel="alternate" type="application/rss+xml" title="Publicaciones de Martín Cabrera" href="{prefijo}feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Publicaciones de Martin Cabrera" href="{prefijo}feed.xml">
   <link rel="preload" href="{prefijo}assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{prefijo}styles.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -301,7 +301,7 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
   <a class="skip-link" href="#contenido">Ir al contenido</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="{prefijo}index.html" aria-label="Martín Cabrera, inicio"><span class="monogram" aria-hidden="true">MC<span>.</span></span><span class="brand-name">Martín Cabrera<span>ESTRATEGIA Y ASUNTOS PÚBLICOS</span></span></a>
+      <a class="brand" href="{prefijo}index.html" aria-label="Martin Cabrera, inicio"><span class="monogram" aria-hidden="true">MC<span>.</span></span><span class="brand-name">Martin Cabrera<span>ESTRATEGIA Y ASUNTOS PÚBLICOS</span></span></a>
       <button class="menu-toggle" type="button" aria-controls="navegacion" aria-expanded="false"><span>Menú</span><span class="menu-lines" aria-hidden="true"></span></button>
       <nav id="navegacion" aria-label="Navegación principal">
         <a href="{prefijo}index.html#especialidades">Especialidades</a><a href="{prefijo}index.html#trayectoria">Trayectoria</a><a href="{prefijo}index.html#enfoque">Enfoque</a><a href="{prefijo}publicaciones/index.html" aria-current="page">Publicaciones</a><a href="{prefijo}index.html#medios">En medios</a><a class="nav-contact" href="{prefijo}index.html#contacto">Conversemos</a>
@@ -314,11 +314,11 @@ def cabecera(titulo: str, descripcion: str, url: str, prefijo: str, indexable: b
 def pie(prefijo: str) -> str:
     return f'''  <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="footer-brand" href="{prefijo}index.html">Martín Cabrera<span>Marchán</span></a>
+      <a class="footer-brand" href="{prefijo}index.html">Martin Cabrera<span>Marchán</span></a>
       <p>Gestión pública · Asuntos parlamentarios · Relaciones interinstitucionales · Arbitraje</p>
       <nav class="footer-nav" aria-label="Enlaces del pie de página"><a href="{prefijo}publicaciones/index.html">Publicaciones</a><a href="{prefijo}feed.xml">RSS</a><a href="mailto:{CORREO}">Correo</a></nav>
       <nav class="footer-social" aria-label="Redes sociales">{''.join(f'<a href="{u}" rel="me noopener" target="_blank" aria-label="{n} (se abre en otra pestaña)"><span aria-hidden="true">{m}</span></a>' for n, m, u in REDES)}</nav>
-      <span class="footer-copy">© {dt.date.today().year} Martín Cabrera</span>
+      <span class="footer-copy">© {dt.date.today().year} Martin Cabrera</span>
     </div>
   </footer>
 </body>
@@ -459,7 +459,7 @@ def pagina_archivo(items: list[Publicacion], todas: list[Publicacion], base: str
             cuerpo.append(f'<h2 class="archive-year">{g or "Sin fecha confirmada"}</h2><div>')
         cuerpo.append(tarjeta(p, f'{p.slug}.html'))
     cuerpo.append('</div>' if cuerpo else '<p class="empty-state">Aún no hay publicaciones de este tipo.</p>')
-    descripcion = ('Repositorio oficial de columnas, entrevistas, declaraciones y opiniones de Martín Cabrera Marchán '
+    descripcion = ('Repositorio oficial de columnas, entrevistas, declaraciones y opiniones de Martin Cabrera Marchán '
                    'sobre Congreso, gestión pública, control y relaciones interinstitucionales.')
     miga = 'Publicaciones' if not tipo else f'<a href="index.html">Publicaciones</a> · {nombre}'
     titulo = 'Columnas, entrevistas <em>y opiniones.</em>' if not tipo else f'{e(nombre)}<em>.</em>'
@@ -503,7 +503,7 @@ def feed(items: list[Publicacion], base: str) -> str:
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publicaciones de Martín Cabrera Marchán</title>
+    <title>Publicaciones de Martin Cabrera Marchán</title>
     <link>{e(base)}publicaciones/</link>
     <atom:link href="{e(base)}feed.xml" rel="self" type="application/rss+xml"/>
     <description>Columnas, entrevistas, declaraciones y opiniones sobre Congreso, gestión pública, control y relaciones interinstitucionales.</description>

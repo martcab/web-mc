@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publicaciones de Martín Cabrera Marchán</title>
+    <title>Publicaciones de Martin Cabrera Marchán</title>
     <link>https://cabrera.pe/publicaciones/</link>
     <atom:link href="https://cabrera.pe/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Columnas, entrevistas, declaraciones y opiniones sobre Congreso, gestión pública, control y relaciones interinstitucionales.</description>
@@ -48,8 +48,8 @@
       <guid isPermaLink="true">https://cabrera.pe/publicaciones/porque-mudos-estan.html</guid>
       <pubDate>Sat, 28 Sep 2024 08:00:00 -0500</pubDate>
       <category>Columna</category>
-      <description>Columna de Martín Cabrera Marchán en El Comercio.</description>
-      <content:encoded><![CDATA[<p>Columna de Martín Cabrera Marchán en El Comercio.</p><p><a href="https://elcomercio.pe/autor/martin-cabrera/">El Comercio</a></p>]]></content:encoded>
+      <description>Columna de Martin Cabrera Marchán en El Comercio.</description>
+      <content:encoded><![CDATA[<p>Columna de Martin Cabrera Marchán en El Comercio.</p><p><a href="https://elcomercio.pe/autor/martin-cabrera/">El Comercio</a></p>]]></content:encoded>
     </item>
     <item>
       <title>La sentencia del TC y las «cosas del Orinoco»</title>
