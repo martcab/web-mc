@@ -1,5 +1,13 @@
 # Cambios y comprobaciones
 
+## Revisión 6 — 9 de octubre de 2026: fechas y GitHub Pages
+
+- Fechas indicadas por ti: entrevista de RPP, **26 de junio de 2023**; «Mochasueldos» (El Comercio), **23 de octubre de 2024**. Ya no queda ninguna publicación sin fecha; el Cara y Sello figura solo con el año 2023. Los archivos se renombraron con su fecha para ordenarlos; las direcciones públicas no cambian.
+- **GitHub Pages**: flujo `.github/workflows/publicar.yml` (genera y publica al subir a `main`, cada mañana y a mano), `herramientas/armar_sitio.py` (carpeta `_site/` solo con lo público: 39 archivos, 0,8 MB) y `CNAME` con `cabrera.pe`. Los pasos de activación y la tabla de DNS están en el README.
+- Comprobado: las 195 comprobaciones pasan también sirviendo directamente `_site/`, es decir, lo que se publicará. El flujo de GitHub Actions no se pudo ejecutar desde aquí: correrá la primera vez que haya cambios en `main` con Pages activado.
+
+---
+
 ## Revisión 5 — 9 de octubre de 2026: retratos de estudio
 
 - Recibidos tus tres retratos de estudio (fondo gris, terno azul). Se guardaron sin cambios en `assets/originales/` junto con la fotografía anterior (`martin-cabrera-hall.jpg`).

@@ -7,7 +7,7 @@ El sitio es el repositorio oficial de tus columnas, entrevistas, declaraciones y
 1. Copia `contenido/publicaciones/_plantilla.md` con un nombre nuevo sin guion bajo, por ejemplo `2026-10-12-reforma-del-reglamento.md`.
 2. Completa la cabecera y, si corresponde, el texto.
 3. Ejecuta `python3 herramientas/publicar.py`.
-4. Sube los archivos al alojamiento.
+4. Sube los cambios a la rama `main` de GitHub; la web se actualiza sola.
 
 ## Cabecera
 
@@ -51,12 +51,12 @@ python3 herramientas/publicar.py --borradores  # además, vista previa de borrad
 
 La vista previa queda en `publicaciones/_vista-previa/` con aviso de borrador y `noindex`; está en `.gitignore` y `robots.txt`, no la subas.
 
-El script también actualiza la portada (cuatro últimas columnas, cinco últimas opiniones o declaraciones y cuatro últimas entrevistas), el RSS (`feed.xml`), `sitemap.xml` y `robots.txt`. Si hay un error en una cabecera no publica nada e indica qué corregir. Una fecha completa futura deja la publicación programada hasta que el script se ejecute desde ese día.
+El script también actualiza la portada (cuatro últimas columnas, cinco últimas opiniones o declaraciones y cuatro últimas entrevistas), el RSS (`feed.xml`), `sitemap.xml` y `robots.txt`. Si hay un error en una cabecera no publica nada e indica qué corregir. Una fecha completa futura deja la publicación programada; en GitHub Pages aparece sola esa mañana.
 
 ## Ritmo semanal o diario
 
 No hay límite de frecuencia. Para una columna semanal conviene fijar un día y dejarla programada; para opiniones diarias breves usa `tipo: opinion` con textos de 300 a 500 palabras.
 
-## Publicación automática (pendiente)
+## Publicación automática
 
-Hoy hay que ejecutar el script y subir los archivos. Si el sitio se aloja en un servicio con integración de Git (GitHub Pages, Netlify, Cloudflare Pages), el script puede correr en cada cambio. No se configuró porque requiere decidir el alojamiento.
+En GitHub Pages el script corre solo: al subir a `main` un archivo nuevo en `contenido/publicaciones/`, GitHub genera las páginas y publica. Incluso puedes crear o editar el `.md` directamente en la web de GitHub (*Add file → Create new file*) sin instalar nada. Las publicaciones con fecha futura se publican solas la mañana de su fecha. Ejecutar el script en tu computadora sigue sirviendo para revisar antes de subir.
