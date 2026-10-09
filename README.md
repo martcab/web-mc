@@ -52,6 +52,12 @@ Se usan enlaces, no muros incrustados: incrustar los perfiles de X, Instagram, F
 
 El formulario prepara un correo `mailto:` dirigido a `martin@cabrera.pe`. El visitante revisa y envía el mensaje desde su propia aplicación. La página no envía, no almacena datos y no muestra confirmación de envío. No hay analítica, cookies propias ni autenticación.
 
-## Antes de publicar en un dominio propio
+## Dominio: cabrera.pe
 
-La URL canónica aún apunta a `https://martin-cabrera-estrategia.martcab.chatgpt.site/`. Cuando definas el dominio real, cámbiala en `index.html` (`canonical`, `og:url`, `og:image` y el bloque JSON-LD) y vuelve a ejecutar `python3 herramientas/publicar.py`: el script toma el dominio de la URL canónica para el RSS, el sitemap, robots.txt y las páginas de publicaciones. Después regenera el autónomo.
+El sitio está configurado para `https://cabrera.pe/`: URL canónica, `og:url`, `og:image` y datos estructurados en `index.html`; el script toma ese dominio para las páginas de publicaciones, el RSS, el sitemap y robots.txt. Si algún día cambia, edita esas líneas en `index.html` y vuelve a ejecutar `python3 herramientas/publicar.py` y `python3 herramientas/generar_autonomo.py`.
+
+Al conectar el dominio con el alojamiento:
+
+- **No toques los registros MX** de `cabrera.pe`: son los que hacen funcionar `martin@cabrera.pe`. Solo se agregan o cambian los registros que apuntan la web (A/AAAA o CNAME, según el alojamiento).
+- Activa HTTPS y redirige `www.cabrera.pe` a `cabrera.pe` (o al revés, pero que exista una sola versión).
+- No subas `publicaciones/_vista-previa/`, `contenido/`, `herramientas/` ni `docs/`: no hacen daño, pero no son parte del sitio público.

@@ -1,5 +1,18 @@
 # Cambios y comprobaciones
 
+## Revisión 4 — 9 de octubre de 2026: dominio y fechas
+
+- **Dominio `cabrera.pe`**: URL canónica, `og:url`, `og:image` y datos estructurados de la portada; el script regeneró con ese dominio todas las páginas de publicaciones, el RSS, el sitemap y robots.txt. El README explica cómo conectarlo sin afectar el correo (registros MX).
+- **LinkedIn** confirmado por ti: `linkedin.com/in/martcab`.
+- **Fechas tomadas de las publicaciones consultadas**:
+  - Perú21 TV, «Aumento de la asignación congresal»: **30 de abril de 2024**, según los metadatos de publicación de la nota en peru21.pe.
+  - El Comercio, «Cara y Sello» sobre la Mesa Directiva: **2023**. El buscador la sitúa a mediados de 2023 y el texto alude a una legislatura con dos presidentes del Parlamento; falta el día exacto.
+  - RPP, «Congreso y consensos»: se mantiene **2023**, aproximada (el buscador la sitúa a mediados de ese año).
+  - «Mochasueldos» (El Comercio): sigue **sin fecha confirmada**; las notas relacionadas son de fines de 2024 y 2025, pero ninguna da la fecha de esta.
+- Fotografías: tus retratos de estudio solo llegaron como vista previa dentro del mensaje, sin archivo. El sitio sigue usando la fotografía original del proyecto.
+
+---
+
 ## Revisión 3 — 9 de octubre de 2026: confirmaciones y redes
 
 - Confirmaste que eres el entrevistado del video de YouTube y que es de **RPP**: el medio quedó como RPP (el video sigue reproduciéndose en tu página) y RPP se añadió a la franja «En medios» de la portada. La fecha figura como 2023, aproximada.
@@ -90,7 +103,7 @@ No se inventaron cargos, clientes, cifras ni reconocimientos. Lo nuevo proviene 
 
 | Dato | Fuente | Estado |
 | --- | --- | --- |
-| Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. Sin fecha confirmada: «Cara y Sello», «Mochasueldos» y la entrevista de Perú21; la entrevista de YouTube figura como 2023 (aproximada). |
+| Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. Fechas completadas en la revisión 4; solo «Mochasueldos» sigue sin fecha. |
 | Entrevista Perú21 TV («La voz del 21») sobre la asignación congresal | peru21.pe | Verificado por título. Fecha no disponible. |
 | Declaraciones en El Comercio (nueva Cámara de Diputados; casos «mochasueldos») | elcomercio.pe | Verificado por título y cita. |
 | Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Confirmado** por ti (revisión 3): entrevista de RPP. |
@@ -104,6 +117,6 @@ Se encontró en un directorio de terceros (RocketReach) una mención a «Preciso
 1. ~~Confirmar el video de YouTube y la mención a ASEPRI~~ (confirmados en la revisión 3).
 2. ~~Indicar tus perfiles de redes~~ (añadidos en la revisión 3).
 3. Indicar URLs de otras entrevistas en televisión o radio (con el identificador de YouTube basta para incrustarlas).
-4. Definir el dominio real y actualizar la URL canónica (ver README).
+4. ~~Definir el dominio real~~ (cabrera.pe, revisión 4).
 5. Escribir la primera columna propia en `contenido/publicaciones/`.
 6. Confirmar fechas y URLs exactas de las publicaciones marcadas arriba; basta con editar su archivo `.md`.

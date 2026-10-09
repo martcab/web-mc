@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /publicaciones/_vista-previa/
 
-Sitemap: https://martin-cabrera-estrategia.martcab.chatgpt.site/sitemap.xml
+Sitemap: https://cabrera.pe/sitemap.xml
