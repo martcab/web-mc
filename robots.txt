@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /columnas/_vista-previa/
+Disallow: /publicaciones/_vista-previa/
 
 Sitemap: https://martin-cabrera-estrategia.martcab.chatgpt.site/sitemap.xml

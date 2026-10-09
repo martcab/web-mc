@@ -6,7 +6,7 @@ const BASE = process.env.BASE_URL || 'http://localhost:8000';
 const out = [];
 const log = (ok, msg) => { out.push((ok ? 'PASS ' : 'FAIL ') + msg); };
 const b = await chromium.launch();
-const pages = ['/', '/columnas/'];
+const pages = ['/', '/publicaciones/', '/publicaciones/columnas.html', '/publicaciones/ganarse-el-voto-pero-tambien-la-confianza.html', '/publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html'];
 
 // 1. Desbordamiento horizontal y errores de consola en 4 anchos
 for (const w of [1440, 1024, 390, 360]) for (const p of pages) {
@@ -40,7 +40,7 @@ for (const w of [1440, 1024, 390, 360]) for (const p of pages) {
     const frags = await pg.evaluate(() => [...document.querySelectorAll('a[href*="index.html#"]')].map(a => a.hash));
     if (frags.length) { const home = await b.newPage(); await home.goto(BASE + '/'); for (const f of new Set(frags)) log(await home.$(f) !== null, `${p}: fragmento ${f} existe en portada`); await home.close(); }
   }
-  for (const f of ['/feed.xml', '/sitemap.xml', '/favicon.svg', '/assets/og-martin-cabrera.jpg', '/assets/martin-cabrera-avatar.jpg']) { const r = await pg.request.get(BASE + f); log(r.ok(), `recurso ${f} → ${r.status()}`); }
+  for (const f of ['/feed.xml', '/sitemap.xml', '/favicon.svg', '/assets/og-martin-cabrera.jpg', '/assets/martin-cabrera-avatar.jpg', '/assets/fonts/archivo-variable.woff2', '/assets/fonts/public-sans-variable.woff2', '/robots.txt']) { const r = await pg.request.get(BASE + f); log(r.ok(), `recurso ${f} → ${r.status()}`); }
   await pg.close();
 }
 
@@ -155,6 +155,13 @@ for (const w of [720, 512]) {
   await pg.locator('[data-youtube] .video-poster').click();
   const src = await pg.locator('[data-youtube] iframe').getAttribute('src');
   log(src.startsWith('https://www.youtube-nocookie.com/embed/Gtj2sfF3A3Y'), 'Al pulsar se inserta el reproductor (youtube-nocookie)');
+  await pg.close();
+}
+// 7b. Fuentes propias cargadas
+{
+  const pg = await b.newPage(); await pg.goto(BASE + '/', { waitUntil: 'networkidle' });
+  const ok = await pg.evaluate(async () => { await document.fonts.ready; return document.fonts.check('800 40px Archivo') && document.fonts.check('16px "Public Sans"'); });
+  log(ok, 'Fuentes Archivo y Public Sans cargadas desde assets/fonts');
   await pg.close();
 }
 // 8. Movimiento reducido

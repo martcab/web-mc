@@ -1,11 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Columna de Martín Cabrera Marchán</title>
-    <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/columnas/</link>
+    <title>Publicaciones de Martín Cabrera Marchán</title>
+    <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/</link>
     <atom:link href="https://martin-cabrera-estrategia.martcab.chatgpt.site/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Análisis sobre Congreso, gestión pública, control y relaciones interinstitucionales.</description>
+    <description>Columnas, entrevistas, declaraciones y opiniones sobre Congreso, gestión pública, control y relaciones interinstitucionales.</description>
     <language>es-PE</language>
-
+    <item>
+      <title>El Congreso que juró por sus muertos</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/el-congreso-que-juro-por-sus-muertos.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/el-congreso-que-juro-por-sus-muertos.html</guid>
+      <pubDate>Mon, 27 Jul 2026 08:00:00 -0500</pubDate>
+      <category>Columna</category>
+      <description>Sobre la instalación del Congreso bicameral y si la Mesa Directiva dedicará los próximos cinco años a administrar el conflicto de memorias.</description>
+      <content:encoded><![CDATA[<p>Sobre la instalación del Congreso bicameral y si la Mesa Directiva dedicará los próximos cinco años a administrar el conflicto de memorias.</p><p><a href="https://elcomercio.pe/autor/martin-cabrera/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ganarse el voto, pero también la confianza</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/ganarse-el-voto-pero-tambien-la-confianza.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/ganarse-el-voto-pero-tambien-la-confianza.html</guid>
+      <pubDate>Thu, 09 Jul 2026 08:00:00 -0500</pubDate>
+      <category>Columna</category>
+      <description>El nuevo Congreso bicameral se instala con una legitimidad de origen delgada: los partidos con escaño suman el 33,65 % del electorado hábil, la mitad del 68,2 % con que empezó el Congreso del 2000. La propuesta es que senadores y diputados asuman la reforma de la representación.</description>
+      <content:encoded><![CDATA[<p>El nuevo Congreso bicameral se instala con una legitimidad de origen delgada: los partidos con escaño suman el 33,65 % del electorado hábil, la mitad del 68,2 % con que empezó el Congreso del 2000. La propuesta es que senadores y diputados asuman la reforma de la representación.</p><p><a href="https://elcomercio.pe/opinion/columnistas/ganarse-el-voto-pero-tambien-la-confianza-por-martin-cabrera-noticia/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Diputados 2026-2031: experiencia, nivel académico y perfil de la nueva Cámara Baja</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/diputados-2026-2031-experiencia-nivel-academico-y-perfil-de-la-nueva-camara-baja.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/diputados-2026-2031-experiencia-nivel-academico-y-perfil-de-la-nueva-camara-baja.html</guid>
+      <pubDate>Thu, 01 Jan 2026 08:00:00 -0500</pubDate>
+      <category>Declaración</category>
+      <description>Los altos niveles de inexperiencia de los nuevos diputados activan tres alarmas en el nuevo Congreso.</description>
+      <content:encoded><![CDATA[<p>Los altos niveles de inexperiencia de los nuevos diputados activan tres alarmas en el nuevo Congreso.</p><p><a href="https://elcomercio.pe/politica/congreso/diputados-2026-2031-esta-es-la-experiencia-nivel-academico-y-perfil-de-la-nueva-camara-baja-del-congreso-bicameralidad-tlcnota-noticia/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Porque mudos están</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/porque-mudos-estan.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/porque-mudos-estan.html</guid>
+      <pubDate>Sat, 28 Sep 2024 08:00:00 -0500</pubDate>
+      <category>Columna</category>
+      <description>Columna de Martín Cabrera Marchán en El Comercio.</description>
+      <content:encoded><![CDATA[<p>Columna de Martín Cabrera Marchán en El Comercio.</p><p><a href="https://elcomercio.pe/autor/martin-cabrera/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>La sentencia del TC y las «cosas del Orinoco»</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/la-sentencia-del-tc-y-las-cosas-del-orinoco.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/la-sentencia-del-tc-y-las-cosas-del-orinoco.html</guid>
+      <pubDate>Thu, 01 Aug 2024 08:00:00 -0500</pubDate>
+      <category>Columna</category>
+      <description>Sobre una sentencia del Tribunal Constitucional y sus implicancias para la gobernabilidad y la efectividad del Estado.</description>
+      <content:encoded><![CDATA[<p>Sobre una sentencia del Tribunal Constitucional y sus implicancias para la gobernabilidad y la efectividad del Estado.</p><p><a href="https://www.lampadia.com/opiniones/mcabrera/la-sentencia-del-tc-y-las-cosas-del-orinoco/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ganadores, perdedores y perdidos</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/ganadores-perdedores-y-perdidos.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/ganadores-perdedores-y-perdidos.html</guid>
+      <pubDate>Wed, 26 Jul 2023 08:00:00 -0500</pubDate>
+      <category>Columna</category>
+      <description>Sobre la elección de la Mesa Directiva del Congreso, la alianza entre Fuerza Popular y Perú Libre y la fragmentación del Parlamento en doce bancadas.</description>
+      <content:encoded><![CDATA[<p>Sobre la elección de la Mesa Directiva del Congreso, la alianza entre Fuerza Popular y Perú Libre y la fragmentación del Parlamento en doce bancadas.</p><p><a href="https://elcomercio.pe/opinion/colaboradores/ganadores-perdedores-y-perdidos-por-martin-cabrera-marchan-columna-congreso-peru-libre-fuerza-popular-mesa-directiva-noticia/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Congreso y consensos en tiempos de crisis</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/congreso-y-consensos-en-tiempos-de-crisis.html</guid>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 -0500</pubDate>
+      <category>Entrevista</category>
+      <description>Entrevista sobre la capacidad del Congreso para construir acuerdos en momentos de crisis.</description>
+      <content:encoded><![CDATA[<p>Entrevista sobre la capacidad del Congreso para construir acuerdos en momentos de crisis.</p><p><a href="https://www.youtube.com/watch?v=Gtj2sfF3A3Y">YouTube</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>¿Cuáles deberían ser las características de la nueva Mesa Directiva?</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/cuales-deberian-ser-las-caracteristicas-de-la-nueva-mesa-directiva.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/cuales-deberian-ser-las-caracteristicas-de-la-nueva-mesa-directiva.html</guid>
+      <category>Opinión</category>
+      <description>Posiciones contrastadas en la sección Cara y Sello sobre el perfil que debería tener la Mesa Directiva del Congreso en el contexto político.</description>
+      <content:encoded><![CDATA[<p>Posiciones contrastadas en la sección Cara y Sello sobre el perfil que debería tener la Mesa Directiva del Congreso en el contexto político.</p><p><a href="https://elcomercio.pe/opinion/colaboradores/cara-y-sello-cuales-deberian-de-ser-las-caracteristicas-de-esta-nueva-mesa-directiva-en-el-actual-contexto-politico-alejandro-rospiglios-martin-cabrera-noticia/">El Comercio · Cara y Sello</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>«Mochasueldos»: por qué los casos no avanzan en el Congreso</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/mochasueldos-por-que-los-casos-no-avanzan-en-el-congreso.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/mochasueldos-por-que-los-casos-no-avanzan-en-el-congreso.html</guid>
+      <category>Declaración</category>
+      <description>El Congreso debe reformar sus instrumentos internos para poder abordar y sancionar este tipo de casos.</description>
+      <content:encoded><![CDATA[<p>El Congreso debe reformar sus instrumentos internos para poder abordar y sancionar este tipo de casos.</p><p><a href="https://elcomercio.pe/politica/congreso/congreso-app-magaly-ruiz-y-la-caja-chica-los-legisladores-denunciados-por-mochasueldos-y-los-casos-aun-pendientes-en-el-congreso-legislativo-fiscalia-de-la-nacion-noticia/">El Comercio</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Aumento de la asignación congresal</title>
+      <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/aumento-de-la-asignacion-congresal.html</link>
+      <guid isPermaLink="true">https://martin-cabrera-estrategia.martcab.chatgpt.site/publicaciones/aumento-de-la-asignacion-congresal.html</guid>
+      <category>Entrevista</category>
+      <description>Conversación sobre el aumento de la asignación a los congresistas.</description>
+      <content:encoded><![CDATA[<p>Conversación sobre el aumento de la asignación a los congresistas.</p><p><a href="https://peru21.pe/peru21tv/lavozdel21/congresistas-martin-cabrera-sobre-el-aumento-de-asignacion-congresal-deberia-evaluarse-bajo-criterios-tecnicos-noticia">Perú21 TV · La voz del 21</a></p>]]></content:encoded>
+    </item>
   </channel>
 </rss>

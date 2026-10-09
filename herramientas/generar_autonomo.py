@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Genera martin_cabrera_autonomo.html: la portada en un solo archivo.
 
-Incrusta estilos, JavaScript, favicon y retrato para revisar el sitio sin
-servidor (doble clic en el archivo). Los enlaces a columnas/ y feed.xml solo
+Incrusta estilos, fuentes, JavaScript, favicon y retrato para revisar el sitio sin
+servidor (doble clic en el archivo). Los enlaces a publicaciones/ y feed.xml solo
 funcionan si el archivo está junto a la carpeta del proyecto.
 
 Uso: python3 herramientas/generar_autonomo.py
@@ -25,6 +25,9 @@ def main() -> None:
     retrato = data_uri(RAIZ / 'assets' / 'martin-cabrera-retrato-900.jpg', 'image/jpeg')
     icono = data_uri(RAIZ / 'favicon.svg', 'image/svg+xml')
 
+    for fuente in sorted((RAIZ / 'assets' / 'fonts').glob('*.woff2')):
+        css = css.replace(f"url('assets/fonts/{fuente.name}')", f"url('{data_uri(fuente, 'font/woff2')}')")
+    html = re.sub(r'\s*<link rel="preload" href="assets/fonts/[^>]*>', '', html)
     html = html.replace('<link rel="stylesheet" href="styles.css">', f'<style>\n{css}</style>')
     html = html.replace('<script src="site.js" defer></script>', '')
     html = html.replace('</body>', f'<script>\n{js}</script>\n</body>')

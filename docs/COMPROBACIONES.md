@@ -1,11 +1,38 @@
-# Cambios y comprobaciones — 9 de octubre de 2026
+# Cambios y comprobaciones
 
-## 1. Punto de partida
+## Revisión 2 — 9 de octubre de 2026: paleta IPOC, tipografía y repositorio de publicaciones
+
+**Cambios**
+
+- Paleta afín a IPOC Consultores (azul `#1F4E79`, gris `#595959`, azul claro `#D6E4F0`, tomados de sus plantillas de documentos) con negro, amarillo y rojo sangre. Detalles en `docs/BENCHMARK.md`.
+- Tipografía: Archivo (titulares) y Public Sans (texto), alojadas en `assets/fonts/` con su licencia OFL.
+- Favicon e imagen para redes rehechos con la nueva identidad.
+- El sitio pasa a ser el **repositorio oficial**: cada columna, entrevista, declaración u opinión es un archivo en `contenido/publicaciones/` y tiene su página en `publicaciones/`, con archivo por año, filtros por tipo, RSS y sitemap. Admite fechas parciales (solo año o año y mes) y publicaciones sin fecha confirmada.
+- Las listas de la portada (columnas, opiniones y declaraciones, entrevistas) ya no se escriben a mano: las genera el script a partir de esos archivos.
+- Se cargaron las diez publicaciones verificadas en la revisión 1. La antigua carpeta `columnas/` se reemplazó por `publicaciones/` (no tenía textos publicados).
+- Defectos visuales corregidos en esta ronda: leyenda del retrato poco legible sobre la parte clara de la foto (degradado reforzado); botón y reproductor dentro de las páginas de publicación heredaban el color y subrayado de los enlaces del texto; la cita de una entrevista se repetía dos veces.
+
+**Comprobaciones ejecutadas** (`herramientas/qa/comprobar.mjs`): **195 de 195 correctas**, sobre la portada, el archivo, un filtro, una columna y una entrevista:
+
+- Sin desplazamiento horizontal, errores de JavaScript ni recursos con error en 1440, 1024, 390 y 360 px.
+- Enlaces internos, anclas, fragmentos entre páginas, ids únicos, `alt` en imágenes; RSS, sitemap, robots, fuentes e imágenes responden 200.
+- Las fuentes Archivo y Public Sans cargan desde el propio sitio.
+- Menú móvil, navegación sin JavaScript, desplegables, teclado y foco visible, texto y zoom al 200 %, formulario y `mailto:` (`herramientas/qa/mailto.mjs`), copia del correo, video sin conexión previa a YouTube, movimiento reducido: sin cambios respecto de la revisión 1 y todo correcto.
+- Contraste WCAG de la nueva paleta: todos los pares de texto ≥ 4,77:1 (amarillo sobre azul, solo en titulares grandes); el resto entre 6,6:1 y 10,3:1.
+- Versión autónoma regenerada con las fuentes incrustadas.
+
+**Pendientes**: los mismos de la revisión 1 (lectores de pantalla, Safari y Firefox, enlaces externos, validador W3C).
+
+---
+
+## Revisión 1 — 9 de octubre de 2026
+
+### 1. Punto de partida
 
 - Se extrajo `proyecto_martin_cabrera.zip` y se confirmó que las huellas SHA-256 de `index.html`, `styles.css`, `site.js`, `favicon.svg` y `assets/martin-cabrera.jpg` coinciden con `SOURCE_MANIFEST.json`.
 - La versión original se guardó sin cambios como primera revisión del repositorio (`Importa el sitio original exportado`) y se sirvió en local para capturarla antes de modificar nada (`docs/capturas/antes-*`).
 
-## 2. Defectos reproducibles corregidos
+### 2. Defectos reproducibles corregidos
 
 | Defecto | Cómo se reprodujo | Corrección |
 | --- | --- | --- |
@@ -18,7 +45,7 @@
 | Retrato con la figura pequeña dentro del encuadre (recorte de 485×555 sobre una foto vertical completa). | Captura a 1440 px. | Recorte editorial 3:4 y tamaños responsivos (JPG/WebP). |
 | Menú móvil abierto: no se cerraba al tocar fuera ni al salir con el teclado; el foco no entraba al menú. | Prueba en 390 y 360 px. | Cierre por clic fuera, por Escape (devuelve el foco) y al salir con Tab; el foco pasa al primer enlace al abrir. |
 
-## 3. Comprobaciones ejecutadas
+### 3. Comprobaciones ejecutadas
 
 Herramientas: servidor `python3 -m http.server 8000`, Chromium (Playwright 1.56) en modo *headless*. El guion está en `herramientas/qa/comprobar.mjs` y puede repetirse. Resultado de la última ejecución: **85 de 85 correctas**, más la verificación del `mailto:`.
 
@@ -48,25 +75,26 @@ Herramientas: servidor `python3 -m http.server 8000`, Chromium (Playwright 1.56)
 - Apertura real del cliente de correo: el navegador *headless* no tiene uno; se verificó la URL `mailto:` generada.
 - Validación formal con el validador del W3C: sin acceso a la red.
 
-## 4. Información añadida y su fuente
+### 4. Información añadida y su fuente
 
 No se inventaron cargos, clientes, cifras ni reconocimientos. Lo nuevo proviene de:
 
 | Dato | Fuente | Estado |
 | --- | --- | --- |
-| Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. |
+| Columnas en El Comercio (2023–2026) y reproducción en Lampadia | Páginas de autor y artículos en elcomercio.pe y lampadia.com (resultados de búsqueda). | Verificado por título y fecha. Para «El Congreso que juró por sus muertos» y «Porque mudos están» no se encontró la URL exacta: enlazan a la página de autor. Sin fecha confirmada: «Cara y Sello», «Mochasueldos» y la entrevista de Perú21; la entrevista de YouTube figura como 2023 (aproximada). |
 | Entrevista Perú21 TV («La voz del 21») sobre la asignación congresal | peru21.pe | Verificado por título. Fecha no disponible. |
 | Declaraciones en El Comercio (nueva Cámara de Diputados; casos «mochasueldos») | elcomercio.pe | Verificado por título y cita. |
-| Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Por confirmar**: el título coincide con tu nombre y tema, pero no se pudo ver el canal. Si no eres tú, borra ese `<article>`. |
+| Video de YouTube `Gtj2sfF3A3Y`, «Martín Cabrera: Congreso es una organización que aún no consigue espacios de consensos» (aprox. 2023) | youtube.com | **Por confirmar**: el título coincide con tu nombre y tema, pero no se pudo ver el canal. Si no eres tú, borra `contenido/publicaciones/2023-congreso-espacios-de-consensos.md` y vuelve a publicar. |
 | Gerencia general de ASEPRI | Tu guía de voz de marca. | **Por confirmar** que quieras mostrarlo y que siga vigente. |
 | Entregables de las especialidades (ayudas memoria, cuadros comparativos, mapas de actores, planes de incidencia) | Tus plantillas de trabajo habituales. | Redactados como servicios, sin clientes ni resultados. |
 
 Se encontró en un directorio de terceros (RocketReach) una mención a «Preciso Comunicación Integral»; **no se incluyó** porque no es una fuente confiable.
 
-## 5. Pendientes para ti
+### 5. Pendientes para ti
 
 1. Confirmar o retirar el video de YouTube y la mención a ASEPRI.
 2. Indicar tus perfiles de LinkedIn, X o YouTube para activar la lista «Sígueme».
 3. Indicar URLs de otras entrevistas en televisión o radio (con el identificador de YouTube basta para incrustarlas).
 4. Definir el dominio real y actualizar la URL canónica (ver README).
-5. Escribir la primera columna en `contenido/columnas/`.
+5. Escribir la primera columna propia en `contenido/publicaciones/`.
+6. Confirmar fechas y URLs exactas de las publicaciones marcadas arriba; basta con editar su archivo `.md`.
