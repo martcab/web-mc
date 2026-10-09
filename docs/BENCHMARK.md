@@ -47,7 +47,7 @@ Ambas tienen licencia libre (OFL) y se alojan en `assets/fonts/` (unos 145 KB en
 
 ### Fotografía
 
-Se conserva tu fotografía real. Se creó un **recorte editorial 3:4** centrado en rostro y torso (en la versión anterior la figura ocupaba una parte pequeña del encuadre), con ajuste leve de contraste y saturación, en JPG y WebP con tamaños responsivos. También un avatar para la firma de las columnas y una imagen 1200×630 para compartir en redes. El original queda intacto en `assets/martin-cabrera.jpg`. No se generó ni alteró el rostro.
+Se usan tus retratos de estudio (fondo gris, terno azul), que encajan con la paleta: el azul del terno conversa con el azul IPOC y el fondo gris con el gris de la marca. Brazos cruzados en la portada y en la imagen para redes, manos juntas en Trayectoria y el primer plano como firma de las publicaciones. Los originales se conservan sin cambios en `assets/originales/`.
 
 ### Cambios por sección
 

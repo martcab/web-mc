@@ -1,5 +1,16 @@
 # Cambios y comprobaciones
 
+## Revisión 5 — 9 de octubre de 2026: retratos de estudio
+
+- Recibidos tus tres retratos de estudio (fondo gris, terno azul). Se guardaron sin cambios en `assets/originales/` junto con la fotografía anterior (`martin-cabrera-hall.jpg`).
+- **Portada**: retrato con brazos cruzados, recorte 3:4 desde la cabeza hasta la cintura, en JPG y WebP de 600 y 900 px. Se quitó el filete claro de 4 px que traían los bordes del archivo. Sin retoque de color.
+- **Trayectoria**: retrato con las manos juntas (4:5) sobre la biografía, con carga diferida.
+- **Firma de cada publicación**: avatar desde el primer plano.
+- **Imagen para redes** (`og-martin-cabrera.jpg`) rehecha con el retrato de brazos cruzados.
+- Textos alternativos actualizados. Comprobaciones: 195 de 195 correctas.
+
+---
+
 ## Revisión 4 — 9 de octubre de 2026: dominio y fechas
 
 - **Dominio `cabrera.pe`**: URL canónica, `og:url`, `og:image` y datos estructurados de la portada; el script regeneró con ese dominio todas las páginas de publicaciones, el RSS, el sitemap y robots.txt. El README explica cómo conectarlo sin afectar el correo (registros MX).
@@ -9,7 +20,6 @@
   - El Comercio, «Cara y Sello» sobre la Mesa Directiva: **2023**. El buscador la sitúa a mediados de 2023 y el texto alude a una legislatura con dos presidentes del Parlamento; falta el día exacto.
   - RPP, «Congreso y consensos»: se mantiene **2023**, aproximada (el buscador la sitúa a mediados de ese año).
   - «Mochasueldos» (El Comercio): sigue **sin fecha confirmada**; las notas relacionadas son de fines de 2024 y 2025, pero ninguna da la fecha de esta.
-- Fotografías: tus retratos de estudio solo llegaron como vista previa dentro del mensaje, sin archivo. El sitio sigue usando la fotografía original del proyecto.
 
 ---
 

@@ -22,7 +22,8 @@ Abre `http://localhost:8000`. Si el puerto está ocupado, usa otro (`8080`, `800
 | `styles.css` | Diseño, paleta (afín a IPOC: azul, negro, gris, amarillo y rojo sangre), tipografía y adaptación a pantallas. Variables al inicio. |
 | `site.js` | Menú móvil, copia del correo, preparación de la consulta (`mailto:`) y carga de videos al pulsar. |
 | `favicon.svg` | Monograma MC. |
-| `assets/` | Retrato (recortes 3:4 en JPG y WebP), avatar e imagen para redes (`og-martin-cabrera.jpg`). `martin-cabrera.jpg` es la fotografía original sin tocar. |
+| `assets/` | Retratos de estudio recortados en JPG y WebP (portada y trayectoria), avatar e imagen para redes (`og-martin-cabrera.jpg`). |
+| `assets/originales/` | Fotografías originales sin modificar: los tres retratos de estudio y la foto anterior en el hall. |
 | `assets/fonts/` | Archivo (titulares) y Public Sans (texto), fuentes libres (licencia OFL) alojadas en el propio sitio: no se descargan de servicios externos. |
 | `contenido/publicaciones/` | **Aquí agregas cada columna, entrevista, declaración u opinión**, un archivo `.md` por pieza. `_plantilla.md` explica el formato. |
 | `publicaciones/` | Páginas generadas: una por publicación, el archivo completo y los filtros por tipo. No se editan a mano. |
