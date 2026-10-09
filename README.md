@@ -1,48 +1,55 @@
-# Martín Cabrera — proyecto portátil
+# Martín Cabrera Marchán — sitio personal
 
-Exportación del sitio personal desarrollado el 6 de octubre de 2026.
+Sitio estático de una página, con columna de opinión y sección de medios. HTML, CSS y JavaScript nativos, sin dependencias, sin base de datos y sin servidor de aplicación. Se aloja en cualquier servicio de archivos estáticos.
 
-Referencia alojada: https://martin-cabrera-estrategia.martcab.chatgpt.site
+Origen: exportación del 6 de octubre de 2026 (`SOURCE_MANIFEST.json` conserva las huellas de los archivos originales). La primera revisión del repositorio guarda esa base sin cambios.
 
-## Retomarlo en Claude Code
-
-1. Descomprime `proyecto_martin_cabrera.zip`.
-2. Abre la carpeta `martin-cabrera` como carpeta de trabajo de Claude Code.
-3. Copia el texto de `PROMPT_CLAUDE_CODE.md` en la conversación, o indica: «Lee PROMPT_CLAUDE_CODE.md y ejecuta sus instrucciones».
-
-## Archivos
-
-| Archivo | Función |
-| --- | --- |
-| `index.html` | Estructura, contenido y metadatos de la página. |
-| `styles.css` | Diseño, colores y adaptación a distintos tamaños de pantalla. |
-| `site.js` | Menú móvil, copia del correo y preparación de consultas. |
-| `favicon.svg` | Icono del sitio con el monograma MC. |
-| `assets/martin-cabrera.jpg` | Fotografía utilizada en la versión alojada. |
-| `martin_cabrera_autonomo.html` | Copia completa en un archivo: incluye estilos, JavaScript, fotografía y favicon. |
-| `PROMPT_CLAUDE_CODE.md` | Contexto e instrucciones para continuar el proyecto. |
-| `SOURCE_MANIFEST.json` | Procedencia y huellas SHA-256 de los archivos originales exportados. |
-
-## Abrirlo
-
-La versión `martin_cabrera_autonomo.html` puede abrirse directamente en un navegador. No necesita descargar fuentes, bibliotecas ni imágenes. Para trabajar con los archivos separados, usa un servidor estático desde esta carpeta, porque sus rutas de recursos empiezan en `/`.
-
-Si tienes Python 3:
+## Verlo en local
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Abre `http://localhost:8000`. Si el puerto está ocupado, utiliza otro puerto libre. No se necesitan Node.js, instalación de paquetes ni compilación. El portapapeles depende de los permisos y del contexto del navegador; existe una alternativa visible si no está disponible.
+Abre `http://localhost:8000`. Si el puerto está ocupado, usa otro (`8080`, `8001`…). Las rutas son relativas, así que `index.html` también se puede abrir con doble clic, aunque el servidor local reproduce mejor el alojamiento real.
+
+`martin_cabrera_autonomo.html` es la portada en un solo archivo (estilos, JavaScript y retrato incrustados) para revisarla sin instalar nada. Se regenera con `python3 herramientas/generar_autonomo.py`. Los cambios se hacen en los archivos separados, no en el autónomo.
+
+## Estructura
+
+| Archivo | Función |
+| --- | --- |
+| `index.html` | Portada: inicio, especialidades, trayectoria, enfoque, columna, en medios y contacto. |
+| `styles.css` | Diseño, paleta, tipografía y adaptación a pantallas. Variables de color al inicio. |
+| `site.js` | Menú móvil, copia del correo, preparación de la consulta (`mailto:`) y carga de videos al pulsar. |
+| `favicon.svg` | Monograma MC. |
+| `assets/` | Retrato (recortes 3:4 en JPG y WebP), imagen de entorno, avatar e imagen para redes (`og-martin-cabrera.jpg`). `martin-cabrera.jpg` es la fotografía original sin tocar. |
+| `contenido/columnas/` | **Aquí escribes la columna**, un archivo `.md` por texto. `_plantilla.md` explica el formato. |
+| `columnas/` | Páginas generadas de la columna y su archivo. No se editan a mano. |
+| `feed.xml`, `sitemap.xml`, `robots.txt` | Generados por el script de publicación. |
+| `herramientas/publicar.py` | Publica la columna (Python 3, solo biblioteca estándar). |
+| `herramientas/generar_autonomo.py` | Regenera la versión en un solo archivo. |
+| `docs/` | Benchmark y propuesta de diseño, comprobaciones realizadas, guía de la columna y capturas antes/después. |
+
+## Publicar una columna (semanal o diaria)
+
+1. Copia `contenido/columnas/_plantilla.md` con un nombre nuevo sin guion bajo, por ejemplo `2026-10-12-reforma-del-reglamento.md`.
+2. Completa la cabecera (`titulo`, `fecha`, `resumen`, `etiquetas`) y escribe el texto en Markdown sencillo.
+3. Para revisarla antes de publicar: `python3 herramientas/publicar.py --borradores` y abre `http://localhost:8000/columnas/_vista-previa/`.
+4. Cambia `estado: borrador` por `estado: publicado` y ejecuta `python3 herramientas/publicar.py`.
+5. Sube los archivos al alojamiento.
+
+El script crea la página de la columna, actualiza el archivo, las tres más recientes en la portada, el RSS y el sitemap. Una fecha futura deja la columna programada hasta que el script se ejecute desde ese día. Detalles en `docs/COLUMNA.md`.
+
+## Medios y redes
+
+- **Columnas en medios** (sección 04) y **entrevistas y declaraciones** (sección 05) están en `index.html`. Para añadir una entrada, copia un `<li>` o un `<article class="video-card">` existente.
+- **Videos de YouTube**: basta con poner el identificador del video en `data-youtube="…"`. El reproductor (dominio `youtube-nocookie.com`) solo se carga cuando el visitante pulsa; antes no hay conexión con YouTube.
+- **Redes sociales**: en la lista «Sígueme» hay entradas ocultas para LinkedIn, X y YouTube. Reemplaza `REEMPLAZAR` por tu usuario real y borra el atributo `hidden`. Se dejaron ocultas porque no se pudo verificar la dirección de tus perfiles.
 
 ## Contacto y datos
 
-El formulario prepara un enlace `mailto:` dirigido a `martin@cabrera.pe`. El usuario revisa y envía el mensaje desde su aplicación de correo. No existe envío automático, backend, almacenamiento de consultas, analítica ni autenticación propia.
+El formulario prepara un correo `mailto:` dirigido a `martin@cabrera.pe`. El visitante revisa y envía el mensaje desde su propia aplicación. La página no envía, no almacena datos y no muestra confirmación de envío. No hay analítica, cookies propias ni autenticación.
 
-El acceso privado de la versión alojada depende del proveedor original, no de estos archivos. Para un nuevo alojamiento, configura allí la audiencia que corresponda. Actualiza `canonical` y `og:url` en `index.html` al nuevo dominio real antes de publicar; si utilizas la versión autónoma, actualízalos también en ella.
+## Antes de publicar en un dominio propio
 
-Esta exportación conserva el código del sitio, sus estilos y recursos. No incluye historial Git, credenciales ni configuración interna de la plataforma original. El sitio alojado no ha sido modificado por la exportación.
-
-## Comprobaciones de esta entrega
-
-Se verificaron integridad del ZIP, correspondencia de los archivos exportados con los originales, anclas, etiquetas del formulario, existencia de recursos, sintaxis de JavaScript y recursos incrustados de la versión autónoma. No se ejecutó una revisión visual en navegador en esta exportación; el prompt solicita hacerla al retomar el trabajo si el entorno lo permite.
+La URL canónica aún apunta a `https://martin-cabrera-estrategia.martcab.chatgpt.site/`. Cuando definas el dominio real, cámbiala en `index.html` (`canonical`, `og:url`, `og:image` y el bloque JSON-LD) y vuelve a ejecutar `python3 herramientas/publicar.py`: el script toma el dominio de la URL canónica para el RSS, el sitemap, robots.txt y las columnas. Después regenera el autónomo.

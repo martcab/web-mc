@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Columna de Martín Cabrera Marchán</title>
+    <link>https://martin-cabrera-estrategia.martcab.chatgpt.site/columnas/</link>
+    <atom:link href="https://martin-cabrera-estrategia.martcab.chatgpt.site/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Análisis sobre Congreso, gestión pública, control y relaciones interinstitucionales.</description>
+    <language>es-PE</language>
+
+  </channel>
+</rss>
