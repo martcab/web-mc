@@ -22,7 +22,7 @@ Abre `http://localhost:8000`. Si el puerto está ocupado, usa otro (`8080`, `800
 | `styles.css` | Diseño, paleta, tipografía y adaptación a pantallas. Variables de color al inicio. |
 | `site.js` | Menú móvil, copia del correo, preparación de la consulta (`mailto:`) y carga de videos al pulsar. |
 | `favicon.svg` | Monograma MC. |
-| `assets/` | Retrato (recortes 3:4 en JPG y WebP), imagen de entorno, avatar e imagen para redes (`og-martin-cabrera.jpg`). `martin-cabrera.jpg` es la fotografía original sin tocar. |
+| `assets/` | Retrato (recortes 3:4 en JPG y WebP), avatar e imagen para redes (`og-martin-cabrera.jpg`). `martin-cabrera.jpg` es la fotografía original sin tocar. |
 | `contenido/columnas/` | **Aquí escribes la columna**, un archivo `.md` por texto. `_plantilla.md` explica el formato. |
 | `columnas/` | Páginas generadas de la columna y su archivo. No se editan a mano. |
 | `feed.xml`, `sitemap.xml`, `robots.txt` | Generados por el script de publicación. |
